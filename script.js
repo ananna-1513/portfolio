@@ -1,4 +1,3 @@
-// Reveal animation on scroll — both scroll up & scroll down
 function revealElements() {
   const elements = document.querySelectorAll('.reveal');
   const windowHeight = window.innerHeight;
@@ -10,7 +9,6 @@ function revealElements() {
     if (elementTop < windowHeight - revealPoint) {
       el.classList.add('active');
     } else {
-      // When scrolling up → animation resets
       el.classList.remove('active');
     }
   });
@@ -18,3 +16,4 @@ function revealElements() {
 
 window.addEventListener('scroll', revealElements);
 window.addEventListener('load', revealElements);
+
